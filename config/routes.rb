@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'pages#index'
   get "/about",to: 'pages#about_us'
   get "/students",to: 'pages#students'
@@ -6,5 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :bca
+  resources :bcas
+  resources :mcas
 end
